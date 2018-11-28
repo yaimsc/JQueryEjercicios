@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejercicio 1</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <h1>Titulo</h1>
+    <a href="https://www.google.es/search?q=zubiri+manteo&rlz=1C1GCEU_esES821ES822&oq=zubiri&aqs=chrome.1.69i57j0j69i61l3j0.2799j0j7&sourceid=chrome&ie=UTF-8" id="zubiri">Zubiri</a>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ante sapien, fermentum id enim in, finibus pulvinar sapien.
+      Etiam luctus scelerisque enim et dignissim. Pellentesque sit amet vestibulum leo, et rutrum ligula.
+      Mauris consectetur leo ut tortor scelerisque posuere. Nulla facilisi. Vivamus enim nisl, pharetra rhoncus pulvinar eget, bibendum sit amet quam.
+      Donec pretium nec ante eget lacinia. Nam ultrices libero id vulputate lacinia. Suspendisse eget tempus arcu.
+      Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce tristique metus non nisl mollis placerat bibendum ac dolor.
+      Curabitur in nunc non lacus pellentesque malesuada id nec justo. Aliquam blandit nulla sit amet tortor interdum, ut fermentum ligula sollicitudin.
+      Etiam feugiat lacus vitae orci accumsan, vitae mollis quam eleifend</p>
+      <ul>
+          <li>Lorem</li>
+          <li>Ipsun</li>
+          <li>Dolor</li>
+      </ul>
+      <div class="div">
+        Pellentesque luctus ex eget elit consequat lacinia. In hac habitasse platea dictumst. Phasellus tristique vel elit nec blandit. In sit amet tempus elit.
+        Aenean vel tempor ligula. Aenean elit massa, placerat sit amet dolor eget, venenatis suscipit est. Vivamus accumsan rutrum tellus ut ultrices.
+        Cras tempus quam id feugiat rutrum. Praesent condimentum justo tellus, id egestas ligula mattis at. Aliquam sit amet semper tellus. Quisque congue vitae diam ut semper.
+        Vestibulum venenatis ornare erat. Vivamus aliquam enim at mauris tincidunt varius. Maecenas posuere libero non malesuada aliquam.
+        Nam posuere diam dui, nec tempor mi varius id.
+      </div>
+      <script>
+        $("document").ready(function(){
+
+          $("p").click(function(){
+            $(this).hide();
+          });
+
+          $("#zubiri").click(function(){
+            alert("se ha bloqueado el enlace");
+            return false;
+          });
+
+          $("li").mouseenter(function(){
+            $(this).css({ "background-color" : "lightblue", "font-weight" : "bold"});
+          });
+
+          $("div").click(function(){
+            $("div").before("BORRADO!!!");
+            $(this).remove();
+          });
+
+        });
+      </script>
+  </body>
+</html>

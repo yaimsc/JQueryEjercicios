@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Formulario</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <p>
+      <input type="text" name="" value="">
+      <input type="text" name="" value="">
+      <input type="text" name="" value="">
+    </p>
+    <p>
+      <input type="text" name="" value="">
+      <input type="text" name="" value="">
+      <input type="text" name="" value="">
+    </p>
+    <script>
+      $("document").ready(function(){
+
+        $("input").focus(function(){
+          $(this).css({"border-color":"red"});
+        });
+
+        $("input").focus(function(){
+          $(this).parent().css({"border":"1px blue solid"});
+        });
+
+      });
+    </script>
+  </body>
+</html>
