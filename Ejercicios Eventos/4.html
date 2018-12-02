@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cuadrado</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+	.cuadrado{
+		height:200px;
+		width:200px;
+		display: flex;
+		flex-direction: column;
+
+	}
+	.red{
+		background-color: red;
+		height:100px;
+		width: 100px;
+	}
+	.green{
+		background-color: green;
+		height:100px;
+		width: 100px;
+	}
+	.blue{
+		background-color: blue;
+		height:100px;
+		width: 100px;
+	}
+	.yellow{
+		background-color: yellow;
+		height:100px;
+		width: 100px;
+	}
+	.arriba{
+		display: flex;
+		flex-direction: row-reverse;
+	}
+	.abajo{
+		display: flex;
+		flex-direction: row-reverse;
+	}
+</style>
+<body>
+	<div class="cuadrado">
+		<div class="arriba">
+			<div class="red"><p></p></div>
+			<div class="green"><p></p></div>
+		</div>
+		<div class="abajo">
+			<div class="blue"><p></p></div>
+			<div class="yellow"><p></p></div>
+		</div>
+	</div>
+<script type="text/javascript">
+	$("document").ready(function(){
+
+		$(".green").mouseenter(function(){
+				$("p", this).text("Viene de arriba");
+			});
+		$(".red").mouseenter(function(){
+				$("p", this).text("Viene de arriba");
+			});
+		$(".blue").mouseenter(function(){
+				$("p", this).text("Viene de abajo");
+			});
+		$(".yellow").mouseenter(function(){
+				$("p", this).text("Viene de abajo");
+			});
+	});
+
+</script>
+</body>
+</html>
