@@ -1,0 +1,49 @@
+<html>
+<head>
+	<title>Ejercicio 6</title>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+</head>
+<body>
+    <textarea id='texto' rows='5' cols='50' style='resize:none;'></textarea>
+    <button type="button" id="btnVocales" name="btnVocales">
+        Contar vocales
+    </button>
+</body>
+
+<script>
+  $("document").ready(function(){
+    $("#btnVocales").on("click", function(){
+       var parrafo = ($('#texto').val()).replace(/ /gi, '').toLowerCase();
+
+       var vocales = [ 'a', 'e', 'i', 'o', 'u'];
+
+       var contador = 0;
+
+       for(var i=0; i < parrafo.length; i++){
+            switch (parrafo[i]) {
+              case 'a':
+                contador++;
+                break;
+              case 'e':
+                contador++;
+                break;
+              case 'i':
+                contador++;
+                break;
+              case 'o':
+                contador++;
+                break;
+              case 'u':
+                contador++;
+                break;
+              default:
+            }
+      }
+
+      var resultado = "En total hay " + contador + "vocales";
+
+      alert(resultado);
+    });
+  });
+</script>
+</html>
